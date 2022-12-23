@@ -28,6 +28,7 @@ public class Bed3x2 : Furniture, IRotatable<Bed3x2>, IWalled<Bed3x2>
 
                         //// Return new matrix
                         //return result;
+                        break;
                         #endregion
                     }
 
@@ -45,6 +46,7 @@ public class Bed3x2 : Furniture, IRotatable<Bed3x2>, IWalled<Bed3x2>
                         //    }
                         //}
                         //return result;
+                        break;
                         #endregion
                     }
 

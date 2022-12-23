@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Furniture : MonoBehaviour
 {
     protected int id;
-    protected int _x1, _y1, _x2, _y2;
+    protected int _x, _y; // _x2, _y2;
     protected Direction _furnitureDirection;
     protected int _width;
     protected int _height;
@@ -18,11 +18,11 @@ public abstract class Furniture : MonoBehaviour
         get { return _furnitureDirection; }
         set { _furnitureDirection = value; }
     }
-    public int[] Coords { get; set; }
+    public int[] Pivot { get; set; }
 
     public Furniture(int width, int height)
     {
-        Coords = new int[] { _x1 = 0, _y1 = 0, _x2 = 0, _y2 = 0 };
+        Pivot = new int[] { _x = 0, _y = 0};
         IsPlaced = false;
 
         _width = width;

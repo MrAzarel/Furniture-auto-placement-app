@@ -4,7 +4,7 @@ using UnityEngine;
 //TODO: Assign IDs to the furniture
 public abstract class Furniture : MonoBehaviour
 {
-    protected int id;
+    protected int _id;
     protected int _x, _y; // _x2, _y2;
     protected Direction _furnitureDirection;
     protected int _width;
@@ -12,7 +12,7 @@ public abstract class Furniture : MonoBehaviour
 
 
     protected bool IsPlaced { get; set; }
-    public int Id { get { return id; } }
+    public int Id { get { return _id; } }
     public Direction FurnitureDirection
     {
         get { return _furnitureDirection; }

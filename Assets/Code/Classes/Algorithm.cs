@@ -5,18 +5,18 @@ using System;
 
 public class PlacingAlgorithm<T> where T: Furniture
 {
-    private int[,] _map;
+    private int[,] Map { get; set; }
 
     private Direction[] Walls { get;}
     private Furniture[] FurnitureToPlace { get; set; }
-    public int[,] Map { get { return _map; } set { } }
+
 
 
     public PlacingAlgorithm(int[] mapDimensions, Direction wall1, Direction wall2, params Furniture[] elements)
     {
         Walls = new Direction[] { wall1, wall2 };
         FurnitureToPlace = elements;
-        _map = new int[mapDimensions[0], mapDimensions[1]];
+        Map = new int[mapDimensions[0], mapDimensions[1]];
     }
 
 
@@ -31,7 +31,14 @@ public class PlacingAlgorithm<T> where T: Furniture
     //TODO: Create an algorithm responsible for furniture placement in given map
     private void Place(Furniture element)
     {
-
+        for (int i = Map.GetLength(0); i > 0; i--)
+        {
+            for (int j = 0; j < Map.GetLength(1); j++)
+            {
+                if (Map[i,j] != 0)
+                    continue;
+            }
+        }
     }
 
     /*// Start is called before the first frame update

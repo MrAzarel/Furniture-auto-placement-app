@@ -2,7 +2,7 @@ public class Bed3x2 : Furniture, IRotatable<Bed3x2>, IWalled<Bed3x2>
 {
     public Bed3x2(int width, int height) : base(width, height)
     {
-        id = 0;
+        _id = 0;
     }
     //TODO: Create an algorithm responsible for furniture rotation
     public void RotateTo(Direction desiredDirection)

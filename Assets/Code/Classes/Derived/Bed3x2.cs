@@ -9,6 +9,49 @@ public class Bed3x2 : Furniture, IRotatable<Bed3x2>, IWalled<Bed3x2>
     {
         if (desiredDirection != FurnitureDirection)
         {
+            switch (desiredDirection)
+            {
+                case Direction.Right:
+                    {
+                        #region ToRight
+                        //// Creating new upside down matrix
+                        //int[,] result = new int[origin.GetLength(1), origin.GetLength(0)];
+
+                        //for (int i = 0; i < origin.GetLength(0); i++)
+                        //{
+                        //    for (int j = 0; j < origin.GetLength(1); j++)
+                        //    {
+                        //        // Turn to the right
+                        //        result[j, origin.GetLength(0) - i - 1] = origin[i, j];
+                        //    }
+                        //}
+
+                        //// Return new matrix
+                        //return result;
+                        #endregion
+                    }
+
+                case (Direction.Left):
+                    {
+                        #region ToLeft
+
+                        //int[,] result = new int[origin.GetLength(1), origin.GetLength(0)];
+
+                        //for (int i = 0; i < origin.GetLength(0); i++)
+                        //{
+                        //    for (int j = 0; j < origin.GetLength(1); j++)
+                        //    {
+                        //        result[origin.GetLength(1) - j - 1, i] = origin[i, j];
+                        //    }
+                        //}
+                        //return result;
+                        #endregion
+                    }
+
+                default:
+                    break;
+            }
+
 
         }
         return;

@@ -8,6 +8,10 @@ public class Sofa2x1 : Furniture //, IRotatable<Furniture>
     public Sofa2x1(int width, int height) : base(width, height)
     {
     }
+    public override void Submit()
+    {
+        throw new System.NotImplementedException();
+    }
 
     /*public void RotateTo(Direction desiredDirection)
     {

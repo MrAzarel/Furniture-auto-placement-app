@@ -29,6 +29,9 @@ public abstract class Furniture : MonoBehaviour
         _width = width;
         _height = height;
     }
+
+    public abstract void Submit();
+
     /*// Start is called before the first frame update
     void Start()
     {

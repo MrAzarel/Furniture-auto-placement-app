@@ -4,4 +4,9 @@ public class Chair1x1 : Furniture
     {
         _id = 1;
     }
+
+    public override void Submit()
+    {
+        throw new System.NotImplementedException();
+    }
 }

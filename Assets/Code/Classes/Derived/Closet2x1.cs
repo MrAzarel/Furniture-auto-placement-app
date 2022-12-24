@@ -10,6 +10,10 @@ public class Closet2x1 : Furniture //, IRotatable<Furniture>, IWalled<Furniture>
     {
 
     }
+    public override void Submit()
+    {
+        throw new System.NotImplementedException();
+    }
 
     /*public bool IsWalled(int[,] map, Furniture element)
     {

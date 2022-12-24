@@ -7,4 +7,9 @@ public class Table2x2 : Furniture
     public Table2x2(int width, int height) : base(width, height)
     {
     }
+
+    public override void Submit()
+    {
+        throw new System.NotImplementedException();
+    }
 }

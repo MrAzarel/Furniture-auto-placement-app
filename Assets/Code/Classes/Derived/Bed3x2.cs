@@ -1,4 +1,4 @@
-public class Bed3x2 : Furniture //, IRotatable<Bed3x2>, IWalled<Bed3x2>
+public class Bed3x2 : Furniture, IComplementary //, IRotatable<Bed3x2>, IWalled<Bed3x2>
 {
     public int[] ExtensionCoords { get; set; }
     public Bed3x2(int width, int height) : base(width, height)
@@ -10,14 +10,14 @@ public class Bed3x2 : Furniture //, IRotatable<Bed3x2>, IWalled<Bed3x2>
         ExtensionCoords = new int[4];
     }
 
-    public void Submit()
+    public override void Submit()
     {
         IsPlaced = true;
         CalculateExtensionCoords();
     }
 
     //Should be called after a suitable place in the map is found
-    private void CalculateExtensionCoords()
+    public void CalculateExtensionCoords()
     {
         switch (FurnitureDirection)
         {

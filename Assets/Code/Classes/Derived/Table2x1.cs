@@ -7,4 +7,9 @@ public class Table : Furniture
     public Table(int width, int height) : base(width, height)
     {
     }
+
+    public override void Submit()
+    {
+        throw new System.NotImplementedException();
+    }
 }

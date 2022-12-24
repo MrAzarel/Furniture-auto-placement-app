@@ -23,6 +23,8 @@ public abstract class Furniture : MonoBehaviour
 
     public Furniture(int width, int height)
     {
+        FurnitureDirection = Direction.Up;
+
         Pivot = new int[] { _x = 0, _y = 0};
         IsPlaced = false;
 

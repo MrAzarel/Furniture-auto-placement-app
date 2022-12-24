@@ -26,9 +26,9 @@ public class GridManager : MonoBehaviour
                     GameObject man = (GameObject)Instantiate(Man, transform);
 
                     man.transform.position = new Vector2(posX, posY);
-                    man.transform.Rotate(0.0f, 0.0f, -90.0f);
+                    /*man.transform.Rotate(0.0f, 0.0f, -90.0f);
                     man.transform.position = new Vector2(posX-1, posY);
-                    man.transform.TransformDirection(-1.0f, -1.0f, 1.0f);
+                    man.transform.TransformDirection(-1.0f, -1.0f, 1.0f);*/
                 }
                 /*GameObject ok = (GameObject)Instantiate(RefOk, transform);
 

@@ -9,7 +9,8 @@ public abstract class Furniture : MonoBehaviour
     protected Direction _furnitureDirection;
     protected int _width;
     protected int _height;
-
+    protected bool Rotatable { get; set; }
+    protected bool AtWall { get; set; }
 
     protected bool IsPlaced { get; set; }
     public int Id { get { return _id; } }

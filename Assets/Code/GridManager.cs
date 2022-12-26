@@ -19,6 +19,7 @@ public class GridManager : MonoBehaviour
         GameObject Stool = (GameObject)Instantiate(Resources.Load("Stool"));
         GameObject Sofa = (GameObject)Instantiate(Resources.Load("Sofa2x1"));
         GameObject Man = (GameObject)Instantiate(Resources.Load("Man"));
+        GameObject Window = (GameObject)Instantiate(Resources.Load("Window"));
 
 
         for (int i = 0; i < Rows; i++)
@@ -44,7 +45,7 @@ public class GridManager : MonoBehaviour
                 float posX = j * TileSize;
                 float posY = i * -TileSize;
 
-                if(i == 4 && j == 3)
+                if (i == 4 && j == 3)
                 {
                     GameObject bed = (GameObject)Instantiate(Bed, transform);
                     GameObject man = (GameObject)Instantiate(Man, transform);
@@ -82,6 +83,13 @@ public class GridManager : MonoBehaviour
 
                     sofa.transform.position = new Vector2(posX, posY);
                 }
+
+                if (i == 0 && (j == 0 || j == 1))
+                {
+                    GameObject window = (GameObject)Instantiate(Window, transform);
+                    window.transform.Rotate(0.0f, 0.0f, 180f);
+                    window.transform.position = new Vector2(posX, posY);
+                }
             }
 
         }
@@ -91,6 +99,7 @@ public class GridManager : MonoBehaviour
         Destroy(Stool);
         Destroy(Sofa);
         Destroy(Man);
+        Destroy(Window);
 
         transform.position = new Vector2(-(Cols * TileSize) / 2 + TileSize, (Rows * TileSize) / 2 - TileSize / 2);
         transform.localScale = new Vector3(TileSize, TileSize, TileSize);

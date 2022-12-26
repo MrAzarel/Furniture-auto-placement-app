@@ -5,46 +5,37 @@ using UnityEngine;
 public abstract class Furniture : MonoBehaviour
 {
     protected int _id;
-    protected int _x, _y; // _x2, _y2;
+    protected int _row, _col; // _x2, _y2;
     protected Direction _furnitureDirection;
     protected int _width;
     protected int _height;
+
+
     protected bool Rotatable { get; set; }
     protected bool AtWall { get; set; }
-
     protected bool IsPlaced { get; set; }
     public int Id { get { return _id; } }
+    public int[] Pivot { get; set; }
     public Direction FurnitureDirection
     {
         get { return _furnitureDirection; }
         set { _furnitureDirection = value; }
     }
-    public int[] Pivot { get; set; }
+
 
     public Furniture(int width, int height)
     {
         FurnitureDirection = Direction.Up;
 
-        Pivot = new int[] { _x = 0, _y = 0};
+        Pivot = new int[] { _row = 0, _col = 0};
         IsPlaced = false;
 
         _width = width;
         _height = height;
     }
 
+
     public abstract void Submit();
-
-    /*// Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }*/
 }
 
 

@@ -1,6 +1,8 @@
-public class Bed2x3 : Furniture, IComplementary //, IRotatable<Bed3x2>, IWalled<Bed3x2>
+public class Bed2x3 : Furniture, IComplementary
 {
     public int[] ExtensionCoords { get; set; }
+
+
     public Bed2x3() : base(2, 3)
     {
         _id = 0;
@@ -10,12 +12,12 @@ public class Bed2x3 : Furniture, IComplementary //, IRotatable<Bed3x2>, IWalled<
         ExtensionCoords = new int[4];
     }
 
+
     public override void Submit()
     {
         IsPlaced = true;
         CalculateExtensionCoords();
     }
-
     //Should be called after a suitable place in the map is found
     public void CalculateExtensionCoords()
     {
@@ -40,7 +42,7 @@ public class Bed2x3 : Furniture, IComplementary //, IRotatable<Bed3x2>, IWalled<
         }
     }
 
-    // 
+/*    // 
     //TODO: (It might be unnecessary to do here!) Create an algorithm responsible for furniture rotation
     public void RotateTo(Direction desiredDirection)
     {
@@ -95,8 +97,8 @@ public class Bed2x3 : Furniture, IComplementary //, IRotatable<Bed3x2>, IWalled<
         }
         return;
     }
-
-    //TODO: (It might be unnecessary to do here!) Finish the algorithm responsible for checking whether given furniture is correctly alligned with a wall
+*/
+/*    //TODO: (It might be unnecessary to do here!) Finish the algorithm responsible for checking whether given furniture is correctly alligned with a wall
     public bool IsWalled(int[,] map, Furniture element)
     {
         for (int i = 0; i < map.GetLength(0); i++)
@@ -110,6 +112,6 @@ public class Bed2x3 : Furniture, IComplementary //, IRotatable<Bed3x2>, IWalled<
             }
         }
         return false;
-    }
+    }*/
 }
 

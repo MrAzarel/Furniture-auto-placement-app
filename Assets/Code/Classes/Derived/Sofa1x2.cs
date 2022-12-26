@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //TODO: Finish Sofa class
-public class Sofa2x1 : Furniture //, IRotatable<Furniture>
+public class Sofa1x2 : Furniture //, IRotatable<Furniture>
 {
-    public Sofa2x1(int width, int height) : base(width, height)
+    public Sofa1x2() : base(1, 2)
     {
     }
+
+    public override void CalculateExtensionCoords()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public override void Submit()
     {
         throw new System.NotImplementedException();

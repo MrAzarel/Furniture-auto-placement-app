@@ -1,11 +1,8 @@
-public class Bed2x3 : Furniture, IComplementary
+public class Bed2x3 : Furniture
 {
-    public int[] ExtensionCoords { get; set; }
-
-
-    public Bed2x3() : base(2, 3)
+    public Bed2x3() : base(3, 2)
     {
-        _id = 0;
+        _id = 1;
 
         Rotatable = true;
         AtWall = true;
@@ -13,13 +10,8 @@ public class Bed2x3 : Furniture, IComplementary
     }
 
 
-    public override void Submit()
-    {
-        IsPlaced = true;
-        CalculateExtensionCoords();
-    }
     //Should be called after a suitable place in the map is found
-    public void CalculateExtensionCoords()
+    public override void CalculateExtensionCoords()
     {
         switch (FurnitureDirection)
         {
@@ -41,77 +33,81 @@ public class Bed2x3 : Furniture, IComplementary
                 break;
         }
     }
-
-/*    // 
-    //TODO: (It might be unnecessary to do here!) Create an algorithm responsible for furniture rotation
-    public void RotateTo(Direction desiredDirection)
+    public override void Submit()
     {
-        if (desiredDirection != FurnitureDirection)
-        {
-            switch (desiredDirection)
-            {
-                case Direction.Right:
-                    {
-                        #region ToRight
-                        //// Creating new upside down matrix
-                        //int[,] result = new int[origin.GetLength(1), origin.GetLength(0)];
-
-                        //for (int i = 0; i < origin.GetLength(0); i++)
-                        //{
-                        //    for (int j = 0; j < origin.GetLength(1); j++)
-                        //    {
-                        //        // Turn to the right
-                        //        result[j, origin.GetLength(0) - i - 1] = origin[i, j];
-                        //    }
-                        //}
-
-                        //// Return new matrix
-                        //return result;
-                        break;
-                        #endregion
-                    }
-
-                case (Direction.Left):
-                    {
-                        #region ToLeft
-
-                        //int[,] result = new int[origin.GetLength(1), origin.GetLength(0)];
-
-                        //for (int i = 0; i < origin.GetLength(0); i++)
-                        //{
-                        //    for (int j = 0; j < origin.GetLength(1); j++)
-                        //    {
-                        //        result[origin.GetLength(1) - j - 1, i] = origin[i, j];
-                        //    }
-                        //}
-                        //return result;
-                        break;
-                        #endregion
-                    }
-
-                default:
-                    break;
-            }
-
-
-        }
-        return;
+        IsPlaced = true;
+        CalculateExtensionCoords();
     }
-*/
-/*    //TODO: (It might be unnecessary to do here!) Finish the algorithm responsible for checking whether given furniture is correctly alligned with a wall
-    public bool IsWalled(int[,] map, Furniture element)
-    {
-        for (int i = 0; i < map.GetLength(0); i++)
+    /*    // 
+        //TODO: (It might be unnecessary to do here!) Create an algorithm responsible for furniture rotation
+        public void RotateTo(Direction desiredDirection)
         {
-            if (i == map.GetLength(0) - 1 || i == 0)
+            if (desiredDirection != FurnitureDirection)
             {
-                for (int j = 0; j < map.GetLength(1); j++)
+                switch (desiredDirection)
                 {
+                    case Direction.Right:
+                        {
+                            #region ToRight
+                            //// Creating new upside down matrix
+                            //int[,] result = new int[origin.GetLength(1), origin.GetLength(0)];
 
+                            //for (int i = 0; i < origin.GetLength(0); i++)
+                            //{
+                            //    for (int j = 0; j < origin.GetLength(1); j++)
+                            //    {
+                            //        // Turn to the right
+                            //        result[j, origin.GetLength(0) - i - 1] = origin[i, j];
+                            //    }
+                            //}
+
+                            //// Return new matrix
+                            //return result;
+                            break;
+                            #endregion
+                        }
+
+                    case (Direction.Left):
+                        {
+                            #region ToLeft
+
+                            //int[,] result = new int[origin.GetLength(1), origin.GetLength(0)];
+
+                            //for (int i = 0; i < origin.GetLength(0); i++)
+                            //{
+                            //    for (int j = 0; j < origin.GetLength(1); j++)
+                            //    {
+                            //        result[origin.GetLength(1) - j - 1, i] = origin[i, j];
+                            //    }
+                            //}
+                            //return result;
+                            break;
+                            #endregion
+                        }
+
+                    default:
+                        break;
+                }
+
+
+            }
+            return;
+        }
+    */
+    /*    //TODO: (It might be unnecessary to do here!) Finish the algorithm responsible for checking whether given furniture is correctly alligned with a wall
+        public bool IsWalled(int[,] map, Furniture element)
+        {
+            for (int i = 0; i < map.GetLength(0); i++)
+            {
+                if (i == map.GetLength(0) - 1 || i == 0)
+                {
+                    for (int j = 0; j < map.GetLength(1); j++)
+                    {
+
+                    }
                 }
             }
-        }
-        return false;
-    }*/
+            return false;
+        }*/
 }
 

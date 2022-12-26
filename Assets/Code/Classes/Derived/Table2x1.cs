@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Table : Furniture
+public class Table2x1 : Furniture
 {
-    public Table(int width, int height) : base(width, height)
+    public Table2x1(int width, int height) : base(width, height)
     {
     }
 

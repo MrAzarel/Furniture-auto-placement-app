@@ -2,7 +2,7 @@ using UnityEngine;
 
 
 //TODO: Assign IDs to the furniture
-public abstract class Furniture : MonoBehaviour
+public abstract class Furniture //: MonoBehaviour
 {
     protected int _id;
     protected int _row, _col; // _x2, _y2;

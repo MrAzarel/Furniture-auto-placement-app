@@ -1,7 +1,7 @@
-public class Bed3x2 : Furniture, IComplementary //, IRotatable<Bed3x2>, IWalled<Bed3x2>
+public class Bed2x3 : Furniture, IComplementary //, IRotatable<Bed3x2>, IWalled<Bed3x2>
 {
     public int[] ExtensionCoords { get; set; }
-    public Bed3x2(int width, int height) : base(width, height)
+    public Bed2x3() : base(2, 3)
     {
         _id = 0;
 
